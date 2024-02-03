@@ -1,0 +1,31 @@
+{
+  "name": "@nikonov-alex/popup",
+  "version": "0.0.1",
+  "description": "Popup based on @nikonov-alex/components.v2 library",
+  "main": "build/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikonov-alex/popup.git"
+  },
+  "author": "Aleksander Nikonov <nikonov.personal.mail@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikonov-alex/popup/issues"
+  },
+  "homepage": "https://github.com/nikonov-alex/popup#readme",
+  "devDependencies": {
+    "ts-loader": "^9.4.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@nikonov-alex/components.v2": "^0.0.32",
+    "jsx-dom": "^8.0.7"
+  }
+}

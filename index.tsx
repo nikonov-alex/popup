@@ -75,6 +75,7 @@ const Wrapper = ( props: {
     <div className="popup-wrapper"
          style={ {
              zIndex: 9999,
+             animationFillMode: "forwards",
              animation: animation( props.state )
          } }>
         { BACKGROUND }

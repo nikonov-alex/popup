@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: './index.tsx',
     devtool: false,
     module: {
         rules: [
@@ -17,7 +17,7 @@ module.exports = {
     },
     output: {
         filename: 'index.js',
-        path: path.resolve( "./build" ),
+        path: path.resolve( "./" ),
         library: {
             type: "module"
         }
@@ -27,8 +27,5 @@ module.exports = {
     },
     optimization: {
         minimize: true
-    },
-    externals: {
-        "@nikonov-alex/components.v2": "@nikonov-alex/components.v2"
     }
 };

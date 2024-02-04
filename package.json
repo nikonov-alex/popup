@@ -1,9 +1,9 @@
 {
   "name": "@nikonov-alex/popup",
-  "version": "0.0.1",
-  "description": "Popup based on @nikonov-alex/components.v2 library",
-  "main": "build/index.js",
-  "types": "src/index.ts",
+  "version": "0.0.2",
+  "description": "Popup Component",
+  "main": "index.js",
+  "types": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,7 +25,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@nikonov-alex/components.v2": "^0.0.32",
     "jsx-dom": "^8.0.7"
   }
 }

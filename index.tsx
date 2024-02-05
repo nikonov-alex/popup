@@ -54,9 +54,11 @@ enum State {
 
 
 
+type Child = HTMLElement | ReactElement;
+type Children = Child | Child[];
 
 const Window = ( props: {
-    children: HTMLElement | ReactElement
+    children: Children
 } ): HTMLElement =>
     <div className="popup"
          style={ POPUP_STYLES }>{ props.children }</div> as HTMLElement;
@@ -68,7 +70,7 @@ const animation = ( state: State ): string =>
 
 const Wrapper = ( props: {
     state: State,
-    children: HTMLElement | ReactElement
+    children: Children
 } ): HTMLElement =>
     <div className="popup-wrapper"
          style={ {
@@ -81,7 +83,7 @@ const Wrapper = ( props: {
 
 const Popup = ( props: {
     state: State,
-    children: HTMLElement
+    children: Children
 } ): HTMLElement => (
     <div>
         { ANIMATION }

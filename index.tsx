@@ -1,4 +1,4 @@
-import { StyleInput } from "jsx-dom";
+import { ReactElement, StyleInput } from "jsx-dom";
 
 const ANIMATION: HTMLElement =
     <style dangerouslySetInnerHTML={{
@@ -56,7 +56,7 @@ enum State {
 
 
 const Window = ( props: {
-    children: HTMLElement
+    children: HTMLElement | ReactElement
 } ): HTMLElement =>
     <div className="popup"
          style={ POPUP_STYLES }>{ props.children }</div> as HTMLElement;
@@ -68,7 +68,7 @@ const animation = ( state: State ): string =>
 
 const Wrapper = ( props: {
     state: State,
-    children: HTMLElement
+    children: HTMLElement | ReactElement
 } ): HTMLElement =>
     <div className="popup-wrapper"
          style={ {

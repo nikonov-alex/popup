@@ -3,7 +3,7 @@ import { StyleInput } from "jsx-dom";
 const ANIMATION: HTMLElement =
     <style dangerouslySetInnerHTML={{
         __html: `
-        @keyframes popup-open {
+        @keyframes popup-opening {
             from {
                 opacity: 0;
             }
@@ -11,7 +11,7 @@ const ANIMATION: HTMLElement =
                 opacity: 1;
             }
         }
-        @keyframes popup-close {
+        @keyframes popup-closing {
             from {
                 opacity: 1;
             }
@@ -62,11 +62,9 @@ const Window = ( props: {
          style={ POPUP_STYLES }>{ props.children }</div> as HTMLElement;
 
 const animation = ( state: State ): string =>
-    State.OPENING === state
-        ? "popup-open 0.6s"
-    : State.CLOSING === state
-        ? "popup-close 0.6s"
-    : "";
+    State.OPENED === state
+        ? ""
+    : `popup-${state} 0.6s forwards`;
 
 const Wrapper = ( props: {
     state: State,
@@ -75,7 +73,6 @@ const Wrapper = ( props: {
     <div className="popup-wrapper"
          style={ {
              zIndex: 9999,
-             animationFillMode: "forwards",
              animation: animation( props.state )
          } }>
         { BACKGROUND }

@@ -77,7 +77,7 @@ const Wrapper = ( props: {
              zIndex: 9999,
              animation: animation( props.state )
          } }>
-        { BACKGROUND }
+        { BACKGROUND.cloneNode( true ) as HTMLElement }
         <Window>{ props.children }</ Window>
     </div> as HTMLElement;
 
@@ -86,7 +86,7 @@ const Popup = ( props: {
     children: Children
 } ): HTMLElement => (
     <div>
-        { ANIMATION }
+        { ANIMATION.cloneNode( true ) as HTMLElement }
         <Wrapper state={ props.state }>{ props.children }</Wrapper>
     </div>
 ) as HTMLElement;

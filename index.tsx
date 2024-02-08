@@ -63,9 +63,9 @@ const Window = ( props: {
     <div className="popup"
          style={ POPUP_STYLES }>{ props.children }</div> as HTMLElement;
 
-const animation = ( state: State ): string =>
+const animation = ( state: State ): string | undefined =>
     State.OPENED === state
-        ? ""
+        ? undefined
     : `popup-${state} 0.6s forwards`;
 
 const Wrapper = ( props: {

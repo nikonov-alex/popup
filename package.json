@@ -1,6 +1,6 @@
 {
   "name": "@nikonov-alex/popup",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Popup Component",
   "main": "index.js",
   "types": "index.tsx",

@@ -75,6 +75,7 @@ const Wrapper = ( props: {
     <div className="popup-wrapper"
          style={ {
              zIndex: 9999,
+             position: "fixed",
              animation: animation( props.state )
          } }>
         { BACKGROUND.cloneNode( true ) as HTMLElement }

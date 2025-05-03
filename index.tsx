@@ -70,11 +70,9 @@ const animation = ( state: State ): string =>
 
 const Wrapper = ( props: {
     state: State,
-    children: Children,
-    className?: string
+    children: Children
 } ): HTMLElement =>
-    <div className={ "popup-wrapper " + (props.className ?? "") }
-         style={ {
+    <div style={ {
              zIndex: 9999,
              position: "fixed",
              animation: animation( props.state )
@@ -85,9 +83,10 @@ const Wrapper = ( props: {
 
 const Popup = ( props: {
     state: State,
-    children: Children
+    children: Children,
+    className?: string
 } ): HTMLElement => (
-    <div>
+    <div className={ "popup-wrapper " + (props.className ?? "") }>
         { ANIMATION.cloneNode( true ) as HTMLElement }
         <Wrapper state={ props.state }>{ props.children }</Wrapper>
     </div>

@@ -70,9 +70,10 @@ const animation = ( state: State ): string =>
 
 const Wrapper = ( props: {
     state: State,
-    children: Children
+    children: Children,
+    className?: string
 } ): HTMLElement =>
-    <div className="popup-wrapper"
+    <div className={ "popup-wrapper " + (props.className ?? "") }
          style={ {
              zIndex: 9999,
              position: "fixed",
